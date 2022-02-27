@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import AuthLayout from './utils/AuthLayout';
 import Login from './pages/Login';
+import Registro from './pages/Registro';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
       </Route>
     </Routes>
   );

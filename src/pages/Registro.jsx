@@ -1,8 +1,9 @@
+import React from 'react';
 import Logo from '../assets/images/capres.jpg';
 import { Link } from 'react-router-dom';
 import Button from '../utils/Button';
 
-const Login = () => {
+const Registro = () => {
   return (
     <div className=" flex w-full h-screen bg-gray-100 justify-center items-center">
       <div className=" flex flex-col min-w-full items-center">
@@ -10,13 +11,13 @@ const Login = () => {
           <img src={Logo} alt="Logo Capres" className="h-20 md:h-auto w-auto" />
         </div>
         <div className="text-gray-700 pt-8 text-2xl md:text-4xl font-bold pb-10 text-heading ">
-          Log in
+          Registra tu cuenta
         </div>
         <div className="-mt-8">
           <span className="text-sm">
-            No tienes una cuenta?{' '}
+            Ya tienes una cuenta?{' '}
             <Link to="/registro" className="text-blue-600 font-medium">
-              Registrate
+              Inicia sesión
             </Link>
           </span>
         </div>
@@ -32,6 +33,24 @@ const Login = () => {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700"
                 >
+                  Correo electrónico
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autoComplete="email"
+                    required
+                    className="w-full border-gray-300 rounded-lg shadow-sm"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="username"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Usuario
                 </label>
                 <div className="mt-1">
@@ -41,6 +60,7 @@ const Login = () => {
                     id="username"
                     autoComplete="username"
                     required
+                    placeholder="Número de cédula"
                     className="w-full border-gray-300 rounded-lg shadow-sm"
                   />
                 </div>
@@ -65,7 +85,7 @@ const Login = () => {
               </div>
               <div>
                 <Button width="full" font_weight="semibold" type="submit">
-                  <span className="text-sm">Iniciar Sesión</span>
+                  <span className="text-sm">Registrarse</span>
                 </Button>
               </div>
               <div>
@@ -84,4 +104,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Registro;
