@@ -60,7 +60,9 @@ const Header = () => {
               </li>
             ))}
             <div>
-              <ButtonNav>Ingresa ya</ButtonNav>
+              <ButtonNav>
+                <Link to="/login">Ingresa ya</Link>
+              </ButtonNav>
             </div>
           </ul>
         </nav>

@@ -16,11 +16,10 @@ const Home = () => {
       <div className=" border-b-2 pb-8 border-gray-200">
         <Feature />
       </div>
-
       <div className="">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <h1 className="w-full mb-6 md:mb-8 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            <h1 className="w-full mb-6 md:pb-10 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               Servicios que presta CAPRES a sus asociados
             </h1>
           </div>
@@ -103,13 +102,20 @@ const Home = () => {
             <div className="flex flex-col justify-center">
               <div className="max-w-xl mb-6">
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                  Préstamos para vehículos
+                  Préstamos para vivienda
                   <br className="hidden md:block" />
                 </h2>
                 <p className="text-base md:pb-6 text-gray-700 md:text-lg">
                   Capres podrá otorgar a sus afiliados, previo cumplimiento de
-                  los requisitos, préstamos para adquisición de o recuperación
-                  de vehículos.
+                  los requisitos, préstamos para{' '}
+                  <span>
+                    <strong>adquisición </strong>
+                  </span>{' '}
+                  o{' '}
+                  <span>
+                    <strong>remodelación</strong>
+                  </span>{' '}
+                  de vivienda principal.
                 </p>
                 <Button size="large" variant="primary">
                   Leer mas...
@@ -139,18 +145,47 @@ const Home = () => {
             <div className="flex flex-col justify-center">
               <div className="max-w-xl mb-6">
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                  Fondo Especial para Programas (FEP)
+                  Préstamos para vehículos
                   <br className="hidden md:block" />
                 </h2>
                 <p className="text-base md:pb-6 text-gray-700 md:text-lg">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae. explicabo.
+                  Capres podrá otorgar a sus afiliados, previo cumplimiento de
+                  los requisitos, préstamos para adquisición de o recuperación
+                  de vehículos.
                 </p>
                 <Button size="large" variant="primary">
                   Leer mas...
                 </Button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="">
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
+            <div className="flex flex-col justify-center">
+              <div className="max-w-xl mb-6">
+                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                  Fondo Especial para Programas (FEP)
+                  <br className="hidden md:block" />
+                </h2>
+                <p className="text-base md:pb-6 text-gray-700 md:text-lg">
+                  Capres podrá otorgar a sus afiliados, previo cumplimiento de
+                  los requisitos, préstamos para adquisición de o recuperación
+                  de vehículos.
+                </p>
+                <Button size="large" variant="primary">
+                  Leer mas...
+                </Button>
+              </div>
+            </div>
+            <div>
+              <img
+                className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+                src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                alt=""
+              />
             </div>
           </div>
         </div>
