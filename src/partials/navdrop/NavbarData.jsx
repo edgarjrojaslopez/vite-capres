@@ -1,10 +1,18 @@
+import React from 'react';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import * as IoIcons from 'react-icons/io';
+import * as RiIcons from 'react-icons/ri';
+
 export const navItems = [
   { path: '/', name: 'Inicio', key: 'id-1' },
   {
     path: '/about',
     name: 'Nosotros',
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
     key: 'id-2',
-    submenu: [
+    subNav: [
       { path: '/us', name: 'Acerca de', key: 'id-8' },
       { path: '/historia', name: 'Historia', key: 'id-9' },
       { path: '/junta', name: 'Junta Directiva', key: 'id-10' },

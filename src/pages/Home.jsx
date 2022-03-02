@@ -45,7 +45,7 @@ const Home = () => {
                   pierda legalmente la condición de asociado o por retiro
                   voluntario
                 </p>
-                <Button size="large" variant="primary">
+                <Button size="large" width="third" variant="primary">
                   Leer mas...
                 </Button>
               </div>
@@ -81,14 +81,14 @@ const Home = () => {
                   antigüedad superior a seis (6) meses las siguientes clases de
                   préstamos:
                 </p>
-                <p className="text-base md:pb-6 text-gray-700 md:text-lg">
+                <div className="text-base md:pb-6 text-gray-700 md:text-lg">
                   <ul className=" pl-8 list-disc list inside">
                     <li>Préstamos a Corto Plazo</li>
                     <li>Préstamos a Mediano Plazo</li>
                     <li>Préstamos a Largo Plazo</li>
                   </ul>
-                </p>
-                <Button size="large" variant="primary">
+                </div>
+                <Button size="large" width="third" variant="primary">
                   Leer mas...
                 </Button>
               </div>
@@ -117,7 +117,7 @@ const Home = () => {
                   </span>{' '}
                   de vivienda principal.
                 </p>
-                <Button size="large" variant="primary">
+                <Button size="large" width="third" variant="primary">
                   Leer mas...
                 </Button>
               </div>
@@ -153,7 +153,7 @@ const Home = () => {
                   los requisitos, préstamos para adquisición de o recuperación
                   de vehículos.
                 </p>
-                <Button size="large" variant="primary">
+                <Button size="large" width="third" variant="primary">
                   Leer mas...
                 </Button>
               </div>
@@ -175,7 +175,7 @@ const Home = () => {
                   los requisitos, préstamos para adquisición de o recuperación
                   de vehículos.
                 </p>
-                <Button size="large" variant="primary">
+                <Button size="large" width="third" variant="primary">
                   Leer mas...
                 </Button>
               </div>

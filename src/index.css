@@ -19,7 +19,7 @@
     @apply md:h-[3.5rem] p-0 mt-2 md:mt-0 transition-all duration-300 ease-in-out;
   }
   .link {
-    @apply text-gray-100 hover:text-gray-400 duration-300 ease-in-out;
+    @apply text-blue-100 hover:text-white duration-300 ease-in-out;
   }
   .link.dark {
     @apply text-gray-100 hover:border-b-2 hover:border-gray-500 duration-300 ease-in;
@@ -44,5 +44,14 @@
   }
   .react-icons {
     @apply text-3xl text-blue-500;
+  }
+
+  /* List Style Check Type */
+  .list-check-type {
+    list-style-position: inside;
+    list-style-image: url(/src/check.svg);
+    width: 0.5rem;
+    height: 0.5rem;
+    list-style-type: square;
   }
 }

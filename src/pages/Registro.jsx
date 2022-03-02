@@ -8,7 +8,13 @@ const Registro = () => {
     <div className=" flex w-full h-screen bg-gray-100 justify-center items-center">
       <div className=" flex flex-col min-w-full items-center">
         <div className="-mt-0 md:mt-auto">
-          <img src={Logo} alt="Logo Capres" className="h-20 md:h-auto w-auto" />
+          <Link to="/">
+            <img
+              src={Logo}
+              alt="Logo Capres"
+              className="h-20 md:h-auto w-auto"
+            />
+          </Link>
         </div>
         <div className="text-gray-700 pt-8 text-2xl md:text-4xl font-bold pb-10 text-heading ">
           Registra tu cuenta
@@ -16,7 +22,7 @@ const Registro = () => {
         <div className="-mt-8">
           <span className="text-sm">
             Ya tienes una cuenta?{' '}
-            <Link to="/registro" className="text-blue-600 font-medium">
+            <Link to="/login" className="text-blue-600 font-medium">
               Inicia sesión
             </Link>
           </span>

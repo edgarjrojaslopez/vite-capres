@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../utils/Button';
 
 const Hero = () => {
@@ -21,8 +22,15 @@ const Hero = () => {
               {/* <button className="bg-blue-500 text-base md:text-lg text-gray-100 py-2 md:py-4 px-6 md:px-10">
                 No tienes una cuenta?
               </button> */}
-              <Button variant="primary" size="large">
-                No tienes una cuenta?
+              <Button
+                variant="primary"
+                width="half"
+                size="large"
+                className="w-max"
+              >
+                <Link to="/registro" className="text-base md:text-lg">
+                  No tienes una cuenta?
+                </Link>
               </Button>
             </div>
           </div>

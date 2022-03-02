@@ -8,6 +8,7 @@ import NavMobile from './NavMobile';
 import Button from '../utils/Button';
 import { MdClose } from 'react-icons/md';
 import ButtonNav from '../utils/ButtonNav';
+import { Menu, Transition } from '@headlessui/react';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -40,7 +41,8 @@ const Header = () => {
             <FaBars className="fabars-react-icon" />
           )}
         </div>
-        <nav className=" md:bg-transparent inline-flex">
+        <div className=" md:bg-transparent inline-flex">
+          {' '}
           <ul
             className={`md:top-0  bg-blue-600 md:bg-transparent md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto  left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in 
             ${
@@ -49,23 +51,134 @@ const Header = () => {
                 : 'top-[-490px] md:opacity-100 opacity-0'
             } `}
           >
-            {navItems.map((item) => (
-              <li
-                key={item.key}
-                className={navbar ? 'li-text shrinked-text' : 'li-text'}
+            <li className="li-text">
+              <Link to="/" className="link" onClick={() => setOpen(!open)}>
+                inicio
+              </Link>
+            </li>
+            <Menu as="li" className="li-text">
+              <Menu.Button
+                to="/nosotros"
+                onClick={() => setOpen(!open)}
+                className="hover:text-white font-medium uppercase text-blue-100"
               >
-                <Link to={item.path} className="link">
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+                Nosotros
+              </Menu.Button>
+              <Transition
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+              >
+                <Menu.Items className="absolute mt-4 w-80 rounded-b-md bg-blue-700 md:bg-blue-600/60 py-4 md:mt-12">
+                  <ul>
+                    <li className="min-w-max py-2 px-4 text-blue-200 hover:bg-blue-700 hover:text-gray-100 ">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            className={`${active && 'bg-blue-700'}`}
+                            to="/about/acercade"
+                          >
+                            Acerca de
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    </li>
+                    <li className="min-w-max py-2 px-4 text-blue-200 hover:bg-blue-700 hover:text-gray-100 ">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            className={`${active && 'bg-blue-700'}`}
+                            to="/about/historia"
+                          >
+                            Historia
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    </li>
+                    <li className="min-w-max py-2 px-4 text-blue-200 hover:bg-blue-700 hover:text-gray-100 ">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            className={`${active && 'bg-blue-700'}`}
+                            to="/about/junta"
+                          >
+                            Junta Directiva
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    </li>
+                    <li className="min-w-max py-2 px-4 text-blue-200 hover:bg-blue-700 hover:text-gray-100 ">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            className={`${active && 'bg-blue-700'}`}
+                            to="/about/organizacion"
+                          >
+                            Organización administrativa
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    </li>
+                  </ul>
+                </Menu.Items>
+              </Transition>
+            </Menu>
+            <li className="li-text">
+              <Link
+                to="/socios"
+                className="link"
+                onClick={() => setOpen(!open)}
+              >
+                socios
+              </Link>
+            </li>
+            <li className="li-text">
+              <Link
+                to="/delegados"
+                className="link"
+                onClick={() => setOpen(!open)}
+              >
+                delegados
+              </Link>
+            </li>
+            <li className="li-text">
+              <Link
+                to="/servicios"
+                className="link"
+                onClick={() => setOpen(!open)}
+              >
+                servicios
+              </Link>
+            </li>
+            <li className="li-text">
+              <Link
+                to="/descargas"
+                className="link"
+                onClick={() => setOpen(!open)}
+              >
+                descargas
+              </Link>
+            </li>
+            <li className="li-text">
+              <Link
+                to="/contacto"
+                className="link"
+                onClick={() => setOpen(!open)}
+              >
+                contacto
+              </Link>
+            </li>
+
             <div>
               <ButtonNav>
                 <Link to="/login">Ingresa ya</Link>
               </ButtonNav>
             </div>
-          </ul>
-        </nav>
+          </ul>{' '}
+        </div>
       </div>
     </div>
   );
