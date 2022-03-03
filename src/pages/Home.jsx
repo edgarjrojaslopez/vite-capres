@@ -6,6 +6,7 @@ import HeroContent from '../partials/HeroContent';
 import Content from '../partials/Content';
 import ContentReverse from '../partials/ContentReverse';
 import Button from '../utils/Button';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -46,7 +47,9 @@ const Home = () => {
                   voluntario
                 </p>
                 <Button size="large" width="third" variant="primary">
-                  Leer mas...
+                  <Link to="/retiro_haberes" className="text-white">
+                    Leer mas....
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -89,7 +92,9 @@ const Home = () => {
                   </ul>
                 </div>
                 <Button size="large" width="third" variant="primary">
-                  Leer mas...
+                  <Link to="/prestamos_persona" className="text-white">
+                    Leer mas...
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -118,7 +123,9 @@ const Home = () => {
                   de vivienda principal.
                 </p>
                 <Button size="large" width="third" variant="primary">
-                  Leer mas...
+                  <Link to="/prestamos_vivienda" className="text-white">
+                    Leer mas...
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -154,7 +161,9 @@ const Home = () => {
                   de vehículos.
                 </p>
                 <Button size="large" width="third" variant="primary">
-                  Leer mas...
+                  <Link to="/prestamos_vehiculo" className="text-white">
+                    Leer mas...
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -176,7 +185,9 @@ const Home = () => {
                   de vehículos.
                 </p>
                 <Button size="large" width="third" variant="primary">
-                  Leer mas...
+                  <Link to="/fondo_especial" className="text-white">
+                    Leer mas...
+                  </Link>
                 </Button>
               </div>
             </div>
