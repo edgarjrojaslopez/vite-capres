@@ -19,6 +19,9 @@ import PrestamosPersona from './pages/PrestamosPersona';
 import PrestamosVivienda from './pages/PrestamosVivienda';
 import PrestamosVehiculo from './pages/PrestamosVehiculo';
 import FondoEspecial from './pages/FondoEspecial';
+import Descargas from './pages/Descargas';
+import Contacto from './pages/Contacto';
+import ContentLayout from './utils/ContentLayout';
 
 function App() {
   return (
@@ -30,14 +33,20 @@ function App() {
         <Route path="/about/historia" element={<Historia />} />
         <Route path="/about/junta" element={<Junta />} />
         <Route path="/about/organizacion" element={<Organizacion />} />
-        <Route path="/socios" element={<Socios />} />
-        <Route path="/delegados" element={<Delegados />} />
-        <Route path="/servicios" element={<Servicios />} />
-        <Route path="/retiro_haberes" element={<RetiroHaberes />} />
-        <Route path="/prestamos_persona" element={<PrestamosPersona />} />
-        <Route path="/prestamos_vivienda" element={<PrestamosVivienda />} />
-        <Route path="/prestamos_vehiculo" element={<PrestamosVehiculo />} />
-        <Route path="/fondo_especial" element={<FondoEspecial />} />
+
+        <Route element={<ContentLayout />}>
+          <Route path="/prestamos_vivienda" element={<PrestamosVivienda />} />
+          <Route path="/retiro_haberes" element={<RetiroHaberes />} />
+          <Route path="/prestamos_persona" element={<PrestamosPersona />} />
+          <Route path="/socios" element={<Socios />} />
+          <Route path="/delegados" element={<Delegados />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/descargas" element={<Descargas />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/prestamos_vehiculo" element={<PrestamosVehiculo />} />
+          <Route path="/fondo_especial" element={<FondoEspecial />} />
+        </Route>
+        {/* <Route element={<DownloadsLayout />}></Route> */}
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />

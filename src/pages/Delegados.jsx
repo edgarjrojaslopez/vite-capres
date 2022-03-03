@@ -130,40 +130,38 @@ const Delegados = () => {
     },
   ];
   return (
-    <div className="mt-24 w-full  grow bg-hero-pattern bg-repeat">
-      <div className="flex flex-col px-6 md:flex-row gap-2 w-full justify-between bg-hero-pattern items-start">
-        <div className="border-2 prose prose-slate prose-p:my-0 prose-headings:my-1 pros-headings:text-slate-600 max-w-none border-gray-300 p-6 m-4 w-full rounded-md bg-slate-50">
-          <h3>Delegados Regionales</h3>
-          <p className="p-2">
-            Los Delegados son los representantes de los Asociados de CAPRES por
-            cada región Administrativa, debidamente electos en Asamblea parcial
-            de Asociados y acreditados ante el Consejo de Administración y de
-            Vigilancia de la Asociación.
-          </p>
-          <h3 className="text-center">Delegados actuales de CAPRES</h3>
-          <div className="px-2">
-            <table>
-              <thead>
-                <tr>
-                  <th>Región Administrativa</th>
-                  <th>Delegado(s)</th>
-                  <th>Teléfono(s)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {DelegadosData.map((delegado, index) => (
-                  <tr key={index}>
-                    <td>{delegado.region}</td>
-                    <td>{delegado.nombre}</td>
-                    <td>{delegado.telefono}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+    <>
+      <h3 className="text-gray-700/80 p-2">Delegados Regionales</h3>
+      <p className="p-2">
+        Los Delegados son los representantes de los Asociados de CAPRES por cada
+        región Administrativa, debidamente electos en Asamblea parcial de
+        Asociados y acreditados ante el Consejo de Administración y de
+        Vigilancia de la Asociación.
+      </p>
+      <h3 className="text-center text-gray-700/80 p-2">
+        Delegados actuales de CAPRES
+      </h3>
+      <div className="px-2">
+        <table>
+          <thead>
+            <tr>
+              <th>Región Administrativa</th>
+              <th>Delegado(s)</th>
+              <th>Teléfono(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {DelegadosData.map((delegado, index) => (
+              <tr key={index}>
+                <td>{delegado.region}</td>
+                <td>{delegado.nombre}</td>
+                <td>{delegado.telefono}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    </div>
+    </>
   );
 };
 export default Delegados;
