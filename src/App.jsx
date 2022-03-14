@@ -21,12 +21,15 @@ import PrestamosVehiculo from './pages/PrestamosVehiculo';
 import FondoEspecial from './pages/FondoEspecial';
 import Descargas from './pages/Descargas';
 import Contacto from './pages/Contacto';
+import Dashboard from './pages/Dashboard';
 import ContentLayout from './utils/ContentLayout';
+import Signup from './components/signup/signup';
 
 function App() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
+        <Route index element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/about/acercade" element={<AcercaDe01 />} />
@@ -35,6 +38,7 @@ function App() {
         <Route path="/about/organizacion" element={<Organizacion />} />
 
         <Route element={<ContentLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/prestamos_vivienda" element={<PrestamosVivienda />} />
           <Route path="/retiro_haberes" element={<RetiroHaberes />} />
           <Route path="/prestamos_persona" element={<PrestamosPersona />} />
@@ -50,6 +54,7 @@ function App() {
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/registro" element={<Registro />} />
       </Route>
     </Routes>
