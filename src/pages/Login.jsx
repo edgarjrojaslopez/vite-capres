@@ -28,7 +28,7 @@ const Login = () => {
               />
             </Link>
           </div>
-          <div className="text-gray-700 pt-0 text-2xl md:text-4xl font-bold pb-10 text-heading ">
+          <div className="-mb-2 text-gray-700 pt-0 text-2xl md:text-4xl font-bold pb-10 text-heading ">
             Log in
           </div>
           <div className="-mt-8">
@@ -49,7 +49,7 @@ const Login = () => {
                   >
                     Usuario
                   </label>
-                  <div className="mt-1">
+                  <div className="-mt-1">
                     <input
                       type="text"
                       name="username"

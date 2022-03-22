@@ -24,6 +24,7 @@ import Contacto from './pages/Contacto';
 import Dashboard from './pages/Dashboard';
 import ContentLayout from './utils/ContentLayout';
 import Signup from './components/signup/signup';
+import LoginNew from './pages/LoginNew';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<Login />} />
+        <Route path="/login-new" element={<LoginNew />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/registro" element={<Registro />} />
       </Route>
